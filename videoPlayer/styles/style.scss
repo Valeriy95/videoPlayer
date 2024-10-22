@@ -1,17 +1,23 @@
 body {
-    background-color: #47fa00
+    background-color: #080808
 }
 
 .videoplayer {
     width: 90%;
-    background-color: #ffffff;
+    background-color: #080808;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #5900ff;
+    border: 2px solid rgb(189, 174, 130);
     border-radius: 7px;
+}
+
+.title {
+    color: rgb(189, 174, 130);
+    margin: auto;
+    text-align: center;
 }
 
 .btn-play {
@@ -41,7 +47,8 @@ body {
     transition: 0.5s;
 }
 
-.btn-play-stop:hover {
+.btn-play-stop:hover,
+.volume-icon:hover {
     opacity: 0.7;
     cursor: pointer;
     transition: 0.5s;
@@ -62,6 +69,18 @@ body {
 
 .volume {
     width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.volume-icon {
+    background-image: url('assets/svg/volume.svg');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
 }
 
 .progress {
@@ -73,38 +92,42 @@ body {
     padding: 0px 20px;
 }
 
-
-input[type="range"] {
+.progress-bar,
+.volume-input {
     -webkit-appearance: none;
     width: 95%;
     height: 6px;
-    // background: #ddd;
     background: linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) 0%, rgb(200, 200, 200) 0%, rgb(200, 200, 200) 100%);
     border-radius: 5px;
     outline: none;
     opacity: 0.7;
     transition: opacity 0.2s;
-  }
+}
   
-  input[type="range"]:hover {
+.progress-bar:hover,
+.volume-input:hover {
     opacity: 1;
-  }
+}
   
-  /* Стиль ручки ползунка */
-  input[type="range"]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
-    background: #4A90E2;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 50%;
-  }
+}
   
-  input[type="range"]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background: #4A90E2;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 50%;
-  }
+}
+
+.volume-input {
+    width: 65%;
+    background: linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) 100%, rgb(200, 200, 200) 100%, rgb(200, 200, 200) 100%);
+}

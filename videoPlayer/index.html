@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/svg/video.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Video Player</title>
 </head>
 <body>
-    <h1>VIDEO</h1>
+    <h1 class="title">VIDEO</h1>
     <div class="videoplayer">
         <video
         src="assets/video/video.mp4"
@@ -20,7 +21,10 @@
                 <div class="btn-play-stop"></div>
                 <input class="progress-bar" type="range" min="0" max="100" step="1" value="0">
             </div>
-            <div class="volume">volume</div>
+            <div class="volume">
+                <div class="volume-icon"></div>
+                <input class="volume-input" type="range" min="0" max="100" step="1" value="100">
+            </div>
         </div>
     </div>
     <script src="index.js"></script>
